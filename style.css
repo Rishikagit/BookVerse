@@ -1023,7 +1023,7 @@ h4{
 
 .mind{
     height: 140vh;
-    background: url(images/peaceback.png) no-repeat center/cover;
+    background: url(images/mindback.png) no-repeat center/cover;
 }
 .m{
     display: flex;
@@ -1032,4 +1032,120 @@ h4{
     margin-top: 20px;
     align-items: center;
     margin-top: 170px;
+}
+.auth-container{
+    height:80vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background:rgb(175, 102, 244);
+}
+.auth-box{
+    background:white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    border-color: black;
+}
+.auth-box h2{
+    margin-bottom: 20px;
+}
+.auth-box input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    outline: none;//browser default outline removed
+}
+.auth-box input:focus{
+    border-color: red;
+}
+.auth-box button{
+    width: 100%;
+    padding: 10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.auth-box button:hover{
+    background: darkred;
+}
+.auth-box p{
+    margin-top: 10px;
+    font-size: 14px;
+}
+.auth-box a{
+    color: red;
+    text-decoration: none;
+}
+table{
+    width:70%;
+    background:rgb(175, 102, 244);
+    border-radius: 10px;
+    position:sticky
+    border-collapse: collapse;
+    padding: 30px;
+}
+thead{
+    background:rgb(243, 238, 238);
+    height: 50px;
+    font-size: 20px;
+    gap: 20px;
+    padding: 20px;
+}
+th,td{
+   padding: 20px;
+   text-align: center;
+}
+tr{
+    border-bottom: 2px solid black;
+}
+.item h4{
+    border-bottom: 15px;
+}
+.qty-box{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 10px;
+    margin-top: 60px;
+}
+.item img{
+    height: px;
+    width: 100px;
+    border: 2px black;
+}
+.qty-box button{
+    width:30px;
+    height:30px;
+    border: none;
+    background: red;
+    color:wheat;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.qty-box button:hover{
+    background: darkred;
+}
+
+.Remove {
+   background: red;
+   color:white;
+   border-radius: 5px;
+   height:30px;
+   width:30px;
+   cursor: pointer;
+}
+.Remove :hover{
+    background: darkred;
+}
+header{
+    position: sticky;
+    z-index: 100;
+    top: 0;
 }
