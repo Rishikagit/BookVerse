@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="icon" type="image x-icon" href="favicon/favicon.ico">
@@ -32,9 +32,14 @@
        <form>
         <input type="email" placeholder="Enter Email" id="email" required>
         <br>
+
+        <div style="position: relative;">
         <input type="password" placeholder="Enter Password" id="password" required>
+        <i class="fa-solid fa-eye" onclick="togglePassword()" style="position:absolute; top:14px; right:1px;"></i>
+        
         <br>
         <button type="button" onclick="login()">Login</button>
+        </div>
         <br>
         <p><a href="signup.html">Forgot Password?</a></p>
         <p id="error" style="color: red;"></p>
