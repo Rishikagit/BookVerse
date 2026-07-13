@@ -1101,6 +1101,19 @@ th,td{
    padding: 20px;
    text-align: center;
 }
+.grand-total button{
+    background:red;
+    color:white;
+    border:none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.grand-total td{
+    font-size: 22px;
+    padding: 30px 30px;
+    font-weight: bold;
+}
 tr{
     border-bottom: 2px solid black;
 }
@@ -1148,4 +1161,40 @@ header{
     position: sticky;
     z-index: 100;
     top: 0;
+}
+.menu-btn{
+    font-size: 22px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    display: none;
+}
+@media(max-width:768px){
+    nav{
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 10px 15px;
+    }
+    nav img{
+        width: 120px;
+        height: auto;
+    }
+    .menu-btn{
+        display: block;
+    }
+    nav ul{
+        
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    nav ul li a{
+        display: block;
+        text-align: center;
+        width: 100%;
+        
+    }
+    
+    
+    
 }

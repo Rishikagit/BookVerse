@@ -29,3 +29,20 @@ function togglePassword()
         passwordInput.type = "password";
     }
 }
+
+function toggleMenu()
+{
+   let navMenu = document.getElementById("navMenu");
+   let menuIcon = document.getElementById("menuIcon");
+   navMenu.classList.toggle("show");
+   if(navMenu.classList.contains("show"))
+   {
+       menuIcon.classList.remove("fa-bars");
+       menuIcon.classList.add("fa-xmark");
+   }
+   else
+   {
+       menuIcon.classList.remove("fa-xmark");
+       menuIcon.classList.add("fa-bars");
+   }
+}
