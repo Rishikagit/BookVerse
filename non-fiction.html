@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="icon" type="image x-icon" href="favicon/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
          <nav>
-            <img src="images/BookVerse.png" alt="logo" width="150px" height="150px">
-            <ul>
+            <img src="images/BookVerse.png" alt="logo">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="navMenu">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="fiction.html">Fiction</a></li>
                 <li><a href="non-fiction.html">Non-Fiction</a></li>
@@ -37,37 +41,37 @@
         <div class="card">
             <img src="images/atomic habits.jpg" alt="">
             <p>Rs 500</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Atomic Habits', '500', 'images/atomic habits.jpg')">Buy Now</button>
         </div>
         <div class="card">
             <img src="images/7 habits.jpg" alt="">
             <p>Rs 399</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('7 Habits', '399', 'images/7 habits.jpg')">Buy Now</button>
         </div>
         <div class="card">
             <img src="images/the subtle art.png" alt="">
             <p>Rs 299</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('The Subtle Art of Not Giving a F*ck', '299', 'images/the subtle art.png')">Buy Now</button>
         </div>
         <div class="card">
             <img src="images/the gifts.jpg" alt="">
             <p>Rs 449</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('The Gifts of Imperfection', '449', 'images/the gifts.jpg')">Buy Now</button>
         </div>
         <div class="card">
             <img src="images/the power.jpg" alt="">
             <p>Rs 349</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('The Power of Now', '349', 'images/the power.jpg')">Buy Now</button>
         </div>
         <div class="card">
             <img src="images/dont believe everything you think.jpg" alt="">
             <p>Rs 259</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Don't Believe Everything You Think', '259', 'images/dont believe everything you think.jpg')">Buy Now</button>
         </div>
         <div class="card">
             <img src="images/mind.jpg" alt="">
             <p>Rs 149</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Mindset', '149', 'images/mind.jpg')">Buy Now</button>
         </div>
 
     </section>
@@ -78,17 +82,17 @@
         <div class="card1">
             <img src="images/bible.jpg" alt="">
             <p>Rs 150</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('The Bible', '150', 'images/bible.jpg')">Buy Now</button>
         </div>
         <div class="card1">
             <img src="images/bhagvad gita.jpg" alt="">
             <p>Rs 200</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Bhagavad Gita', '200', 'images/bhagvad gita.jpg')">Buy Now</button>
         </div>
         <div class="card1">
             <img src="images/buddha2.jpg" alt="">
             <p>Rs 250</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Buddha', '250', 'images/buddha2.jpg')">Buy Now</button>
         </div>
 
     </section>
@@ -100,17 +104,17 @@
 <div class="card2">
             <img src="images/why we sleep.jpg" alt="">
             <p>Rs 389</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Why We Sleep', '389', 'images/why we sleep.jpg')">Buy Now</button>
         </div>
         <div class="card2">
             <img src="images/outlive.jpg" alt="">
             <p>Rs 449</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Outlive', '449', 'images/outlive.jpg')">Buy Now</button>
         </div>
         <div class="card2">
             <img src="images/ourbody.jpg" alt="">
             <p>Rs 199</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Our Body', '199', 'images/ourbody.jpg')">Buy Now</button>
         </div>
         </div>
         
@@ -123,17 +127,17 @@
             <div class="card3">
                 <img src="images/intothinair.jpg" alt="">
                 <p>Rs 234</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Into Thin Air', '234', 'images/intothinair.jpg')">Buy Now</button>
             </div>
             <div class="card3">
                 <img src="images/the lost city.jpg" alt="">
                 <p>Rs 248</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('The Lost City', '248', 'images/the lost city.jpg')">Buy Now</button>
             </div>
             <div class="card3">
                 <img src="images/endurance.jpg" alt="">
                 <p>Rs 338</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Endurance', '338', 'images/endurance.jpg')">Buy Now</button>
             </div>
         </div>
     </section>
@@ -147,40 +151,86 @@
             <div class="card4">
                 <img src="images/annefrank.png" alt="">
                 <p>Rs 200</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Anne Frank', '200', 'images/annefrank.png')">Buy Now</button>
             </div>
             <div class="card4">
                 <img src="images/curie.jpg" alt="">
                 <p>Rs 240</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Marie Curie', '240', 'images/curie.jpg')">Buy Now</button>
             </div>
             <div class="card4">
                 <img src="images/ElonMuskBook.png" alt="">
                 <p>Rs 260</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Elon Musk', '260', 'images/ElonMuskBook.png')">Buy Now</button>
             </div>
             <div class="card4">
                 <img src="images/playingtowin.jpg" alt="">
                 <p>Rs 165</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Playing to Win', '165', 'images/playingtowin.jpg')">Buy Now</button>
             </div>
             <div class="card4">
                 <img src="images/stevejobs.jpg" alt="">
                 <p>Rs 225</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Steve Jobs', '225', 'images/stevejobs.jpg')">Buy Now</button>
             </div>
             <div class="card4">
                 <img src="images/themanwhoknewinfinity.jpg" alt="">
                 <p>Rs335</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('The Man Who Knew Infinity', '335', 'images/themanwhoknewinfinity.jpg')">Buy Now</button>
             </div>
             <div class="card4">
                 <img src="images/wingsoffire.jpg" alt="">
                 <p>Rs 248</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Wings of Fire', '248', 'images/wingsoffire.jpg')">Buy Now</button>
             </div>
         </div>
     </section>
+
+   <section class="about-us">
+    <div class="about-us-content">
+        <h2>About Us</h2>
+
+<p>BookVerse is your trusted online bookstore, offering a diverse collection of fiction, non-fiction, biographies, academic books, and more. Our mission is to make reading accessible, enjoyable, and inspiring for everyone.</p>
+    </div>
+    <br>
+    
+    
+    <div class="contact-us">
+        <p>
+            Contact
+            <br>
+
+📧 Email: support@bookverse.com
+<br>
+📞 Phone: +91 98765 43210
+<br>
+📍 Address: Mumbai, Maharashtra, India
+<br>
+        </p>
+    </div>
+    <br>
+    
+    <div class="follow-us">
+        Follow Us
+        <br>
+
+📘 Facebook
+<br>
+📸 Instagram
+<br>
+🐦 X (Twitter)
+<br>
+💼 LinkedIn
+    </div>
+    <br>
+    
+    <div class="last">
+        <p>
+            © 2026 BookVerse. All Rights Reserved.
+Where Every Story Begins..
+        </p>
+    </div>
+   </section>
     
 </body>
 </html>

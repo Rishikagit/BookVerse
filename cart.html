@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="icon" type="image x-icon" href="favicon/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <img src="images/BookVerse.png" alt="logo" width="150px" height="150px">
-            <ul>
+            <img src="images/BookVerse.png" alt="logo">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="navMenu">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="fiction.html">Fiction</a></li>
                 <li><a href="non-fiction.html">Non-Fiction</a></li>
@@ -32,54 +36,67 @@
             <th>Total</th>
             <th>Remove</th>
         </thead>
-        <tbody>
-            <tr>
-                <td class="item">
-                    <img src="images/dont believe everything you think.jpg" alt="">
-                </td>
-                <td>Rs 259</td>
-                <td class="qty-box">
-                    <button>+</button>
-                    <span>0</span>
-                    <button>-</button>
-                </td>
-                <td>Rs 259</td>
-                <td><button class="Remove">X</button></td>
-            </tr>
-            <tr>
-                <td class="item">
-                    <img src="images/ikigai.jpg" alt="">
-                </td>
-                <td>Rs 225</td>
-                <td class="qty-box">
-                     <button>+</button>
-                    <span>0</span>
-                    <button>-</button>
-                </td>
-                <td>Rs 259</td>
-                <td><button class="Remove">X</button></td>
-            </tr>
-            <tr>
-                <td class="item">
-                    <img src="images/matilda.jpg" alt="">
-                </td>
-                <td>Rs 260</td>
-                <td class="qty-box">
-                     <button>+</button>
-                    <span>0</span>
-                    <button>-</button>
-                </td>
-                <td>Rs 259</td>
-                <td><button class="Remove">X</button></td>
-            </tr>
+        <tbody id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </tbody>
+        <tfoot>
              <tr class="grand-total">
                 <td colspan="3">Grand Total</td>
-                <td>Rs 199</td>
-                <td><button>Proceed</button></td>
+                <td id="grand-total">Rs 0</td>
+                <td><button onclick="proceedToCheckout()">Proceed to Checkout</button></td>
             </tr>
-
-        </tbody>
+        </tfoot>
     </table>
+    <div id="empty-cart" style="display: none;">
+        <h2>Your cart is empty</h2>
+        <p><a href="home.html">Continue Shopping</a></p>
+    </div>
+
+   <section class="about-us">
+    <div class="about-us-content">
+        <h2>About Us</h2>
+
+<p>BookVerse is your trusted online bookstore, offering a diverse collection of fiction, non-fiction, biographies, academic books, and more. Our mission is to make reading accessible, enjoyable, and inspiring for everyone.</p>
+    </div>
+    <br>
+    
+    
+    <div class="contact-us">
+        <p>
+            Contact
+            <br>
+
+📧 Email: support@bookverse.com
+<br>
+📞 Phone: +91 98765 43210
+<br>
+📍 Address: Mumbai, Maharashtra, India
+<br>
+        </p>
+    </div>
+    <br>
+    
+    <div class="follow-us">
+        Follow Us
+        <br>
+
+📘 Facebook
+<br>
+📸 Instagram
+<br>
+🐦 X (Twitter)
+<br>
+💼 LinkedIn
+    </div>
+    <br>
+    
+    <div class="last">
+        <p>
+            © 2026 BookVerse. All Rights Reserved.
+Where Every Story Begins..
+        </p>
+    </div>
+   </section>
     
 </body>
 </html>

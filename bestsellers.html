@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="icon" type="image x-icon" href="favicon/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <img src="images/BookVerse.png" alt="logo" width="150px" height="150px">
-            <ul>
+            <img src="images/BookVerse.png" alt="logo">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="navMenu">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="fiction.html">Fiction</a></li>
                 <li><a href="non-fiction.html">Non-Fiction</a></li>
@@ -131,17 +135,17 @@ Books have the power to ignite imagination, build confidence, and remind us that
             <div class="deep">
                 <img src="images/atomic habits.jpg" alt="">
                 <p>Rs 245</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Atomic Habits', '245', 'images/atomic habits.jpg')">Buy Now</button>
             </div>
             <div class="deep">
                 <img src="images/ikigai.jpg" alt="">
                 <p>Rs 225</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Ikigai', '225', 'images/ikigai.jpg')">Buy Now</button>
             </div>
             <div class="deep">
                 <img src="images/attitude.jpg" alt="">
                 <p>Rs 345</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Attitude is Everything', '345', 'images/attitude.jpg')">Buy Now</button>
             </div>
         </div>
     </section>
@@ -151,21 +155,20 @@ Books have the power to ignite imagination, build confidence, and remind us that
             <div class="live">
                 <img src="images/money.jpg" alt="">
                 <p>Rs 445</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('The Psychology of Money', '445', 'images/money.jpg')">Buy Now</button>
             </div>
-        
+
         <div class="live">
                <img src="images/rich dad poor dad.png" alt="">
                <p>Rs 240</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Rich Dad Poor Dad', '240', 'images/rich dad poor dad.png')">Buy Now</button>
         </div>
         <div class="live">
             <img src="images/think.jpg" alt="">
             <p>Rs 145</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Think and Grow Rich', '145', 'images/think.jpg')">Buy Now</button>
         </div>
         </div>
-        </section>
     </section>
     <section class="chase">
         <h4>🌍 Chase Your Dreams</h4>
@@ -174,17 +177,17 @@ Books have the power to ignite imagination, build confidence, and remind us that
             <div class="goals">
                 <img src="images/the alchemist.jpg" alt="">
                 <p>Rs 325</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('The Alchemist', '325', 'images/the alchemist.jpg')">Buy Now</button>
             </div>
             <div class="goals">
                 <img src="images/themonk.png" alt="">
                 <p>Rs 420</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('The Monk Who Sold His Ferrari', '420', 'images/themonk.png')">Buy Now</button>
             </div>
             <div class="goals">
                 <img src="images/mansearch.png" alt="">
                 <p>Rs 180</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Man\'s Search for Meaning', '180', 'images/mansearch.png')">Buy Now</button>
             </div>
         </div>
     </section>
@@ -194,12 +197,12 @@ Books have the power to ignite imagination, build confidence, and remind us that
             <div class="Thrill">
                 <img src="images/the-silent-patient-2.jpg" alt="">
                 <p>Rs 260</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('The Silent Patient', '260', 'images/the-silent-patient-2.jpg')">Buy Now</button>
             </div>
             <div class="Thrill">
                 <img src="images/gone girl.jpg" alt="">
                 <p>Rs 370</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Gone Girl', '370', 'images/gone girl.jpg')">Buy Now</button>
             </div>
             </div>
         
@@ -210,12 +213,12 @@ Books have the power to ignite imagination, build confidence, and remind us that
         <div class="Magic">
             <img src="images/harrypotter.png" alt="">
             <p>Rs 320</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Harry Potter', '320', 'images/harrypotter.png')">Buy Now</button>
         </div>
         <div class="Magic">
             <img src="images/pj.png" alt="">
             <p>Rs 165</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Percy Jackson', '165', 'images/pj.png')">Buy Now</button>
         </div>
         </div>
     </section>
@@ -225,12 +228,12 @@ Books have the power to ignite imagination, build confidence, and remind us that
         <div class="P">
             <img src="images/bhagvad gita.jpg" alt="">
             <p>Rs 322</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Bhagavad Gita', '322', 'images/bhagvad gita.jpg')">Buy Now</button>
         </div>
         <div class="p">
             <img src="images/bible.jpg" alt="">
             <p>Rs 349</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('The Bible', '349', 'images/bible.jpg')">Buy Now</button>
         </div>
         
         </div>
@@ -242,19 +245,65 @@ Books have the power to ignite imagination, build confidence, and remind us that
             <div class="brain">
                 <img src="images/dont believe everything you think.jpg" alt="">
                 <p>Rs 249</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Don\'t Believe Everything You Think', '249', 'images/dont believe everything you think.jpg')">Buy Now</button>
             </div>
             <div class="brain">
                 <img src="images/the power.jpg" alt="">
                 <p>Rs 234</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('The Power of Your Subconscious Mind', '234', 'images/the power.jpg')">Buy Now</button>
             </div>
             <div class="brain">
                 <img src="images/fast and slow.png" alt="">
                 <p>Rs 432</p>
-                <button>Buy Now</button>
+                <button onclick="addToCart('Thinking Fast and Slow', '432', 'images/fast and slow.png')">Buy Now</button>
             </div>
         </div>
     </section>
+
+   <section class="about-us">
+    <div class="about-us-content">
+        <h2>About Us</h2>
+
+<p>BookVerse is your trusted online bookstore, offering a diverse collection of fiction, non-fiction, biographies, academic books, and more. Our mission is to make reading accessible, enjoyable, and inspiring for everyone.</p>
+    </div>
+    <br>
+    
+    
+    <div class="contact-us">
+        <p>
+            Contact
+            <br>
+
+📧 Email: support@bookverse.com
+<br>
+📞 Phone: +91 98765 43210
+<br>
+📍 Address: Mumbai, Maharashtra, India
+<br>
+        </p>
+    </div>
+    <br>
+    
+    <div class="follow-us">
+        Follow Us
+        <br>
+
+📘 Facebook
+<br>
+📸 Instagram
+<br>
+🐦 X (Twitter)
+<br>
+💼 LinkedIn
+    </div>
+    <br>
+    
+    <div class="last">
+        <p>
+            © 2026 BookVerse. All Rights Reserved.
+Where Every Story Begins..
+        </p>
+    </div>
+   </section>
 </body>
 </html>

@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="icon" type="image x-icon" href="favicon/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <img src="images/BookVerse.png" alt="logo" width="150px" height="150px">
-            <ul>
+            <img src="images/BookVerse.png" alt="logo">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="navMenu">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="fiction.html">Fiction</a></li>
                 <li><a href="non-fiction.html">Non-Fiction</a></li>
@@ -42,34 +46,34 @@ Lose yourself in stories that entertain, inspire, and stay with you long after t
     <section class=" harry-potter">
        
         <div class="harry-potter-1">
-            
+
             <img src="images/part1.jpg" alt="">
             <p>Rs 500</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Harry Potter Part 1', '500', 'images/part1.jpg')">Buy Now</button>
         </div>
         <div class="harry-potter-2">
-            
+
             <img src="images/chamber of secrets.jpg" alt="">
             <p>Rs 450</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Harry Potter Chamber of Secrets', '450', 'images/chamber of secrets.jpg')">Buy Now</button>
         </div>
         <div class="harry-potter-3">
-            
+
             <img src="images/part-3.jpeg" alt="">
             <p>Rs 600</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Harry Potter Part 3', '600', 'images/part-3.jpeg')">Buy Now</button>
         </div>
         <div class="harry-potter-4">
-            
+
             <img src="images/part-4.jpg" alt="">
             <p>Rs 400</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Harry Potter Part 4', '400', 'images/part-4.jpg')">Buy Now</button>
         </div>
         <div class="harry-potter-5">
-            
+
             <img src="images/part-5.jpg" alt="">
             <p>Rs 650</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Harry Potter Part 5', '650', 'images/part-5.jpg')">Buy Now</button>
         </div>
     </section>
     <br>
@@ -78,17 +82,17 @@ Lose yourself in stories that entertain, inspire, and stay with you long after t
        <div class="The Silent Patient">
         <img src="images/the-silent-patient-2.jpg" alt="">
         <p>Rs 288</p>
-        <button>Buy Now</button>
+        <button onclick="addToCart('The Silent Patient', '288', 'images/the-silent-patient-2.jpg')">Buy Now</button>
        </div>
        <div class="Gone Girl">
         <img src="images/gone girl.jpg" alt="">
         <p>Rs 362</p>
-        <button>Buy Now</button>
+        <button onclick="addToCart('Gone Girl', '362', 'images/gone girl.jpg')">Buy Now</button>
        </div>
        <div class="Behind Closed Doors">
         <img src="images/behind closed doors.jpg" alt="">
         <p>Rs 250</p>
-        <button>Buy Now</button>
+        <button onclick="addToCart('Behind Closed Doors', '250', 'images/behind closed doors.jpg')">Buy Now</button>
        </div>
        <br>
        
@@ -99,27 +103,27 @@ Lose yourself in stories that entertain, inspire, and stay with you long after t
         <div class="Sherlock Homes">
             <img src="images/sherlock homes.png" alt="">
             <p>Rs 287</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Sherlock Holmes', '287', 'images/sherlock homes.png')">Buy Now</button>
         </div>
     <div class="The Da Vinci Code">
         <img src="images/the da vinci code.jpg" alt="">
         <p>Rs 385</p>
-        <button>Buy Now</button>
+        <button onclick="addToCart('The Da Vinci Code', '385', 'images/the da vinci code.jpg')">Buy Now</button>
     </div>
     <div class="And Then There Were None">
         <img src="images/booknew.jpg" alt="">
         <p>Rs 315</p>
-        <Button>Buy Now</Button>
+        <Button onclick="addToCart('And Then There Were None', '315', 'images/booknew.jpg')">Buy Now</Button>
     </div>
     <div class="Big Little Lies">
         <img src="images/BigLittleLies.jpg" alt="">
         <p>Rs 300</p>
-        <button>Buy Now</button>
+        <button onclick="addToCart('Big Little Lies', '300', 'images/BigLittleLies.jpg')">Buy Now</button>
     </div>
     <div class="tbh">
         <img src="images/tbh.jpg" alt="">
         <p>Rs 265</p>
-        <button>Buy Now</button>
+        <button onclick="addToCart('The Black House', '265', 'images/tbh.jpg')">Buy Now</button>
     </div>
     
     </section>
@@ -128,17 +132,17 @@ Lose yourself in stories that entertain, inspire, and stay with you long after t
        <div class="The girl on the train">
         <img src="images/the girl on the train.jpg" alt="">
         <p>Rs 200</p>
-        <button>Buy Now</button>
+        <button onclick="addToCart('The Girl on the Train', '200', 'images/the girl on the train.jpg')">Buy Now</button>
     </div>
     <div class="The guest list">
         <img src="images/the guest list.png" alt="">
         <p>Rs 342</p>
-        <button>Buy Now</button>
+        <button onclick="addToCart('The Guest List', '342', 'images/the guest list.png')">Buy Now</button>
     </div>
     <div class="No Exit">
         <img src="images/no exit.jpg" alt="">
         <p>Rs 235</p>
-        <button>Buy Now</button>
+        <button onclick="addToCart('No Exit', '235', 'images/no exit.jpg')">Buy Now</button>
     </div>
 
     </section>
@@ -147,20 +151,66 @@ Lose yourself in stories that entertain, inspire, and stay with you long after t
         <div class="the alchemist">
         <img src="images/the alchemist.jpg" alt="">
         <p>Rs 200</p>
-        <button>Buy Now</button>
+        <button onclick="addToCart('The Alchemist', '200', 'images/the alchemist.jpg')">Buy Now</button>
         </div>
 
         <div class="the three musketeers">
             <img src="images/the three musketeers.jpg" alt="">
             <p>Rs 249</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('The Three Musketeers', '249', 'images/the three musketeers.jpg')">Buy Now</button>
         </div>
 
         <div class="lop">
             <img src="images/lop.jpg" alt="">
             <p>Rs 149</p>
-            <button>Buy Now</button>
+            <button onclick="addToCart('Lord of the Flies', '149', 'images/lop.jpg')">Buy Now</button>
         </div>
      </section>
+
+   <section class="about-us">
+    <div class="about-us-content">
+        <h2>About Us</h2>
+
+<p>BookVerse is your trusted online bookstore, offering a diverse collection of fiction, non-fiction, biographies, academic books, and more. Our mission is to make reading accessible, enjoyable, and inspiring for everyone.</p>
+    </div>
+    <br>
+    
+    
+    <div class="contact-us">
+        <p>
+            Contact
+            <br>
+
+📧 Email: support@bookverse.com
+<br>
+📞 Phone: +91 98765 43210
+<br>
+📍 Address: Mumbai, Maharashtra, India
+<br>
+        </p>
+    </div>
+    <br>
+    
+    <div class="follow-us">
+        Follow Us
+        <br>
+
+📘 Facebook
+<br>
+📸 Instagram
+<br>
+🐦 X (Twitter)
+<br>
+💼 LinkedIn
+    </div>
+    <br>
+    
+    <div class="last">
+        <p>
+            © 2026 BookVerse. All Rights Reserved.
+Where Every Story Begins..
+        </p>
+    </div>
+   </section>
 </body>
 </html>
